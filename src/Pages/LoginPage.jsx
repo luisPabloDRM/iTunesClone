@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { loginUser } from "../redux/Actions/auth.actions";
 
 
 
@@ -42,7 +43,7 @@ const LoginPage = ({dispatch, error}) => {
             <br/>
             <br/>
 
-            {error && <div style={{color:red}}>{error}</div>}
+            {error && <div style={{color:'red'}}>{error}</div>}
         </>
     );
 };

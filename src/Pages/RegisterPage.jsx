@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { connect } from 'react-redux';
-import {registeruser} from "../redux/Actions/auth.actions";
+import {registerUser} from "../redux/Actions/auth.actions";
 
 const INITIAL_STATE = {
     email: '',
@@ -15,7 +15,7 @@ const RegisterPage =({dispatch, error}) => {
 
     const submitForm = (ev) => {
         ev.preventDefault();
-        dispatch(registeruser(form));
+        dispatch(registerUser(form));
     };
 
     return(

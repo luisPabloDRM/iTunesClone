@@ -10,7 +10,7 @@ export const CHECK_SESSION = "CHECK_SESSION";
 export const CHECK_SESSION_OK = "CHECK_SESSION_OK";
 export const CHECK_SESSION_ERROR = "CHECK_SESSION_ERROR"
 
-export const registrUser = (form) => {
+export const registerUser = (form) => {
     return async (dispatch) => {
         dispatch ({ type: AUTH_REGISTER });
 

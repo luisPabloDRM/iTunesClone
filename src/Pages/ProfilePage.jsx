@@ -1,17 +1,22 @@
 import { connect } from "react-redux";
+import { useState } from 'react';
 
 const ProfilePage = ({user}) => {
+
+    const[music, setMusic] = useState("");
+
     return (
         <>
-            <h1>PERFIL</h1>
-
-            <h2>Nombre: {user.username}</h2>
-            <h2>Email: {user.email}</h2>
-
-            <p>HOLI</p>
-            <p>HOLI</p>
-            <p>HOLI</p>
-            <p>HOLI</p>
+           <div>
+               <div>
+                   <label>Search Music..</label>
+                   <input type="text" onChange={(event)=>{
+                       setMusic(event.target.value);
+                   }} 
+                   />
+                   <button>Search Music</button>
+               </div>
+           </div>
         </>
     )
 }
