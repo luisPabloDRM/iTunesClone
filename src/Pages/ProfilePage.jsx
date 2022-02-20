@@ -1,9 +1,16 @@
 import { connect } from "react-redux";
 import { useState } from 'react';
 
+
 const ProfilePage = ({user}) => {
 
     const[music, setMusic] = useState("");
+    
+    const searchMusic=() =>{
+        fetch('../itunes/src/components/ApiItunes.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    }
 
     return (
         <>
@@ -14,7 +21,7 @@ const ProfilePage = ({user}) => {
                        setMusic(event.target.value);
                    }} 
                    />
-                   <button>Search Music</button>
+                   <button onClick={searchMusic} >Search Music</button>
                </div>
            </div>
         </>

@@ -1,5 +1,5 @@
 {
-    "resultCount": 50,
+   
     "results": [
         {
             "wrapperType": "audiobook",
