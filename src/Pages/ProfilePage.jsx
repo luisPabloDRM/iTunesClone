@@ -1,27 +1,38 @@
 import { connect } from "react-redux";
-import { useState } from 'react';
+//import { useState } from 'react';
+import { result } from "../components/ApiItunes";
+import "./ProfilePage.scss";
 
 
 const ProfilePage = ({user}) => {
 
-    const[music, setMusic] = useState("");
+   console.log(result);
     
-    const searchMusic=() =>{
-        fetch('../itunes/src/components/ApiItunes.json')
-        .then(response => response.json())
-        .then(data => console.log(data));
-    }
+ 
 
     return (
         <>
            <div>
-               <div>
-                   <label>Search Music..</label>
-                   <input type="text" onChange={(event)=>{
-                       setMusic(event.target.value);
-                   }} 
-                   />
-                   <button onClick={searchMusic} >Search Music</button>
+               <div className="container">
+                 {result.map((item)=>
+
+                        <div className="card" >
+                          <img className="card-header-img " src={item.artworkUrl100} alt="artWork" />
+                          <div className="card-body" >
+                          <p className="tag">{item.primaryGenreName}</p>
+                        <h3>{item.artistName}</h3>
+                        <h3>{item.trackName}</h3>
+                          <p>{item.collectionCensoredName}</p>
+                          <a href={item.previewUrl}>Preview</a>
+                          <p>{item.collectionPrice} {item.currency}</p>
+                          <img className="user-img" src="https://iconape.com/wp-content/png_logo_vector/apple-3d-logo.png" alt="" />
+                         
+                          </div>
+                       
+                        </div>
+                 )}
+                   
+                   <button>Search Music</button>
                </div>
            </div>
         </>

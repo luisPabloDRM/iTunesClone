@@ -1,6 +1,6 @@
-{
+
    
-    "results": [
+   export const result= [
         {
             "wrapperType": "audiobook",
             "artistId": 284145822,
@@ -1649,4 +1649,3 @@
             "isStreamable": true
         }
     ]
-}

@@ -15,12 +15,13 @@ import "./App.scss";
 const App = ({dispatch, user}) => {
   useEffect(() => {
     dispatch(checkUserSession());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="App">
+      <h2>Welcome {user && user.username}</h2>
       <h1>Itunes</h1>
-      <h2>Welcome Back {user && user.username}</h2>
 
       <Link to="/">Ir a la Home</Link>
       <Link to="/register">Ir a Registro</Link>
