@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { HomePage, LoginPage, RegisterPage, ProfilePage } from "./Pages";
 import PrivateRoute from "./components/PrivateRoute";
 import { Route, Routes, Link } from "react-router-dom";

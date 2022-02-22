@@ -22,9 +22,14 @@ const ProfilePage = ({user}) => {
                             <p className="tag">{item.primaryGenreName}</p>
                             <h3>{item.artistName}</h3>
                             <h3>{item.trackName}</h3>
-                            <p>{item.collectionCensoredName}</p>
+                            {/* <p>{item.collectionCensoredName}</p> */}
                             <a href={item.previewUrl}>Preview</a>
                             <p>{item.collectionPrice} {item.currency}</p>
+                            <audio className="audio" controls="controls">
+                            <source src={item.previewUrl} type="audio/ogg" />
+
+                            Your browser does not support the audio element.
+                            </audio>
                         </div>
 
                     </div>

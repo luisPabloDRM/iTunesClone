@@ -20,7 +20,7 @@
     overflow: hidden;
     width: 150px;
     height: 300px;
-    
+
     
     @media only screen and (min-width: 691px) {
     width: 200px;
@@ -45,6 +45,11 @@
     align-items: flex-start;
     padding: 5px;
     min-height: 250px;
+    h3{
+      margin-top: 2px;
+      margin-bottom: 2px;
+      font-size: 15px;
+    }
     
     @media only screen and (min-width: 691px) {
       padding: 10px;
@@ -54,6 +59,22 @@
         padding: px;
       }
   }
+  .audio{
+    width: 145px;
+    margin-bottom: 1px;
+
+    @media only screen and (min-width: 691px) {
+      width: 195px;
+      
+      }
+   
+      @media only screen and (min-width: 1000px) {
+        width: 295px;
+        
+      }
+
+  }
+
   p {
     font-size: 13px;
     
