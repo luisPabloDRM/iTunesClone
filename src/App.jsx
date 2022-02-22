@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HomePage, LoginPage, RegisterPage, ProfilePage } from "./Pages";
 import PrivateRoute from "./components/PrivateRoute";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import { checkUserSession } from "./redux/Actions/auth.actions";
 import { connect } from "react-redux";
 import "./App.scss";
@@ -29,13 +29,10 @@ const App = ({ dispatch, user }) => {
         <div className="welcome__text">
         <FontAwesomeIcon  className="icon" icon={faApple} />
            <h2>Welcome {user && user.username}</h2>
-        
-        
-       
-    
+
 
           <div className="navBar">
-                <NavLink to="/">
+                {/* <NavLink to="/">
                   <button>Home</button>
                 </NavLink>
 
@@ -49,14 +46,18 @@ const App = ({ dispatch, user }) => {
 
                 <NavLink to="/profile">
                   <button>Profile</button>
-                </NavLink>
-          </div>
+                </NavLink> */}
+                 <Link to="/">Home</Link>
+
+                <Link to="/register">Register</Link>
+
+                <Link to="/login">Login</Link>
+
+                <Link to="/profile">Profile</Link>
+
+                      </div>
           </div>
       </div>
-      {/* <Link to="/">Ir a la Home</Link> */}
-      {/* <Link to="/register">Ir a Registro</Link>
-      <Link to="/login">Ir a Login</Link>
-      <Link to="/profile">Ir a Perfil</Link> */}
 
       <Routes>
         <Route path="/" element={<HomePage />} />
