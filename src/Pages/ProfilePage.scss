@@ -8,6 +8,9 @@
       ". . ."
       ". . ."; 
   };
+ 
+
+
 
   .card {
     margin: 10px;
@@ -15,8 +18,20 @@
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 300px;
-  }
+    width: 150px;
+    height: 300px;
+    
+    @media only screen and (min-width: 691px) {
+    width: 200px;
+    height: 400px;
+    }
+ 
+    @media only screen and (min-width: 1000px) {
+      width: 300px;
+      height: 600px;
+    }
+    } 
+  
   .card-header-img {
     width: 100%;
     
@@ -25,10 +40,18 @@
   .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px;
+    padding: 5px;
     min-height: 250px;
+    
+    @media only screen and (min-width: 691px) {
+      padding: 10px;
+      }
+   
+      @media only screen and (min-width: 1000px) {
+        padding: px;
+      }
   }
   p {
     font-size: 13px;
@@ -48,9 +71,4 @@
   }
 
   
-  .user-img {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-right: 1px;
-  }
+ 

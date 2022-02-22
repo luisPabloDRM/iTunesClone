@@ -1,9 +1,43 @@
 .App {
   text-align: center;
 
-  a{
-      margin-right: 20px;
+}
+.welcome{
+  background-color: rgb(73, 47, 37);
+  margin-top: 0px;
+
+  &__text{
+    display: flex;
+    color: white;
+    font-size: 10px;
+
+    
+
+
   }
 
 }
+.icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:30px;
+  height:30px;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 50%;
+  align-items: center;
+}
+
+
+
+
+a{
+      margin-right: 20px;
+  }
+
 
